@@ -26,7 +26,7 @@ class AuthorizeController extends Controller
 			Session::save();
 
 	    // Redirect back to home page
-			$url='http://localhost/outlook/public/inbox';
+			$url='http://localhost/outlook/public/inbox/Inbox';
 			echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 	    //echo "<script type='text/javascript'>  window.location='home.php'; </script>";
 	    //header("Location: http://localhost/outlook/public/inbox");

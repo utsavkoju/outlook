@@ -1,18 +1,6 @@
 @extends('_templates/default')
 @section('main')
-
-<section class="content-header">
-      <h1>Composer <small>Office 365</small></h1>
-    </section>
-    <section class="content">
-      <div class="row">
-          <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Compose</h3>
-            </div>
-            <div class="box-body no-padding">
-              <div class="table-responsive mailbox-messages">
-                <div class="col-md-12">
+                <div class="col-md-9">
                 	{{ Form::open(array('route' => 'send', 'class' => 'form-horizontal', 'role'=>'form','files'=>true)) }}
 
                 	<div class="box-body">

@@ -15,19 +15,25 @@ namespace App\Helpers;
       return self::makeApiCall($access_token, "", "GET", $getUserUrl);
     }
 
-    public static function getMessages($access_token, $user_email) {
+    public static function getMessages($access_token, $user_email, $mailbox) {
       $getMessagesParameters = array (
         // Only return Subject, ReceivedDateTime, and From fields
         "\$select" => "Subject,ReceivedDateTime,From",
         // Sort by ReceivedDateTime, newest first
         "\$orderby" => "ReceivedDateTime DESC",
         // Return at most 10 results
-        "\$top" => "10"
+        "\$top" => "15"
       );
       
-      $getMessagesUrl = self::$outlookApiUrl."/Me/MailFolders/Inbox/Messages?".http_build_query($getMessagesParameters);
+      $getMessagesUrl = self::$outlookApiUrl."/Me/MailFolders/".$mailbox."/Messages?".http_build_query($getMessagesParameters);
                         
       return self::makeApiCall($access_token, $user_email, "GET", $getMessagesUrl);
+    }
+
+    public static function postMessage($access_token, $user_email, $mail) {
+      $json = json_encode($mail, true);
+      $postMessageUrl = self::$outlookApiUrl."/me/sendmail";
+      return self::makeApiCall($access_token, $user_email, "POST", $postMessageUrl, $json);
     }
     
     public static function getEvents($access_token, $user_email) {

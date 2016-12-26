@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Session;
 
   class oAuthService {
     private static $clientId = "19313ae0-cf1b-4f52-8d44-c926d73d7a3d";
-    private static $clientSecret = "kqedNCiAPbqL4VsdpR4z8s7";
+    private static $clientSecret = "5Cq66qnx01Hp0sXRKCTBTCn";
     private static $authority = "https://login.microsoftonline.com";
     private static $authorizeUrl = '/common/oauth2/v2.0/authorize?client_id=%1$s&redirect_uri=%2$s&response_type=code&scope=%3$s';
     private static $tokenUrl = "/common/oauth2/v2.0/token";
@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Session;
                                    "offline_access",
                                    "https://outlook.office.com/mail.read",
                                    "https://outlook.office.com/calendars.read",
+                                   "https://outlook.office.com/mail.send",
                                    "https://outlook.office.com/contacts.read");
     
     public static function getLoginUrl($redirectUri) {

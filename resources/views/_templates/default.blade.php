@@ -85,6 +85,14 @@
     </nav>
   </header>
   </div>
+  @include('_includes.navigation')
   @yield('main');
+  <footer class="main-footer" style="position:absolute; left:0; bottom:0;height:50px;width:100%;">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.0
+    </div>
+    <strong>Copyright © <?php date('Y');?> <a href="http://psi.org.np">PSI Nepal</a>.</strong> All rights
+    reserved.
+  </footer>
   </body>
   </html>
