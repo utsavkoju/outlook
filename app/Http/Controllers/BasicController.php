@@ -72,15 +72,15 @@ class BasicController extends Controller
 		foreach($emails as $key => $email) {
 			$arr = array(
 				"Message" => array(
-					'Subject' => $email['subject'],
+					'Subject' => 'Payment Deposited',
 					"Body" => array(
 						"ContentType"=>"HTML",
-						"Content" => $email['message'],
+						"Content" => "Hi<br/><br/>This is to inform that payment has been transferred in your bank account as below. <br/><br/><b>Account Name: </b> ".$email['Payee/Beneficiary Account No.Payee/Beneficiary Account Name']."<br/><b>Total Amount: </b>".$email['Payment Currency']." ".$email['Total Amount (Payment Currency)']."<br/><b>Deposited Date: </b>".$email['Debit Date']."<br/><br/> Please acknowledge receipt of the same. <br/><br/>PSI/Nepal<br/>Finance Dept.<br/>+977-01-5553190"
 					),
 					"ToRecipients"=>array(
 						array(
 							"EmailAddress" => array(
-								"Address" => $email['receiver'],
+								"Address" => $email['Email Adress'],
 							)
 						),
 					),

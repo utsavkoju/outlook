@@ -1,0 +1,3 @@
+Payment Reference,Batch Reference,Customer Reference,Status,Import Reference,Type,Payee/Beneficiary Account No.Payee/Beneficiary Account Name,Payment/Value Date,Debit Date,Payment Currency,Total Amount (Payment Currency),Exchange Rate,Total Amount (Debit Currency),Debit Account Number Debit Account Name,DR BCE,DR ACE,Email Adress
+Q0000666,C0000068,2016000154,Under Processing,N,TT,01430000057902000001 Bheri Nepalgunj Tours and Travels ,19/12/2016,19/12/2016,NPR,"34,996.50",1,"34,996.50",POPULATION SERVICES INTL 0018022833802,"34,996.50","34,996.50",ajaydangol@psi.org.np
+Q0000662,C0000068,2016000150,Under Processing,N,TT,18116525901 Raju Prajapati ,19/12/2016,19/12/2016,$,540,1,540,POPULATION SERVICES INTL 0018022833802,540,540,ajaydangol@psi.org.np
